@@ -40,6 +40,6 @@ object CycleSort extends Sort {
       }
     }
     println("Number of writes: " + writes)
-    return tempArray
+    tempArray
   }
 }

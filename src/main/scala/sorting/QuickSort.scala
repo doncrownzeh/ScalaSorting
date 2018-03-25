@@ -16,7 +16,7 @@ object QuickSort extends Sort {
       val temp = array(i)
      array(i) = array(right)
      array(right) = temp
-      return i
+     i
   }
 
   private def quickSort(array: Array[Int], low: Int, high: Int): Array[Int] = {
@@ -26,10 +26,10 @@ object QuickSort extends Sort {
       quickSort(array, 0, p - 1)
       quickSort(array, p + 1, high)
     }
-    return array
+    array
   }
   override def sort(unsorted: Array[Int]): Array[Int] = {
-    var tempArray:Array[Int] = unsorted
-  return quickSort(tempArray, 0, unsorted.length - 1)
+    val tempArray:Array[Int] = unsorted
+  quickSort(tempArray, 0, unsorted.length - 1)
   }
 }
